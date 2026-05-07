@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Finance Tracker Dashboard</h1>
+    <h2>Balance: ${{ balance }}</h2>
+    <p>Income: ${{ income }} | Expense: ${{ expense }}</p>
+    <hr>
+    <ul>
+        {% for t in transactions %}
+        <li>{{ t.date }} - {{ t.title }}: ${{ t.amount }} ({{ t.transaction_type }})</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
